@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body style="background-color:powderblue;"></body>
+<body>
+    <div id="test1"> 
+        <header> 
+            <h2>Queens</h2>
+        </header> 
+    </div>
+     <!-- Leaderboard Section -->
+     <div class="leaderboard">
+        {% for player in players %}
+        <div class="podium">
+            <div class="name">{{ player.player }}</div> <!-- Player's name -->
+            <div class="score">Total Points: {{ player.total_points }}</div> <!-- Podium box -->
+        </div>
+        {% endfor %}
+    </div>
+</body>

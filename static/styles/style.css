@@ -1,0 +1,64 @@
+/* Leaderboard container */
+.leaderboard {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 400px; /* Increased height for larger podiums */
+    margin-top: 50px;
+}
+/* Center the header */
+header {
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 20px; /* Optional: Add some spacing above the header */
+}
+
+/* Podium structure */
+.podium {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-end; /* Align items at the bottom */
+    align-items: center; /* Center items horizontally */
+    margin: 0 15px;
+    text-align: center;
+}
+
+/* Player name styling */
+.podium .name {
+    margin-bottom: 10px; /* Add spacing between the name and the podium */
+    font-weight: bold;
+    font-size: 1em; /* Smaller text size for names */
+}
+
+/* Podium box styling */
+.podium .score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.2em; /* Smaller text size for scores */
+}
+
+/* First place podium - largest */
+.podium:nth-child(1) .score {
+    background-color: gold; /* First place */
+    width: 150px;
+    height: 150px;
+    font-size: 1.5em; /* Slightly larger text for first place */
+}
+
+/* Second place podium - medium */
+.podium:nth-child(2) .score {
+    background-color: silver; /* Second place */
+    width: 130px;
+    height: 130px;
+    font-size: 1.3em;
+}
+
+/* Third place podium - smallest */
+.podium:nth-child(3) .score {
+    background-color: #cd7f32; /* Third place (bronze) */
+    width: 110px;
+    height: 110px;
+    font-size: 1.1em;
+}
